@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <title>Form con input e vettore</title>
+    <style>
+        h1 {
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 200%;
+            padding-bottom: 15px;
+            font-family: Cambria;
+        }
+        p {
+            color: white;
+            font-family: Cambria;
+            padding-left: 2%;
+        }
+        body {
+            background-image: url("https://metalitalia.com/wp-content/uploads/2023/02/SLEEP-TOKEN-Take-Me-Back-To-Eden-2023.webp");
+            background-position-x: center;
+            background-size: cover;
+            color: white;
+        }
+        table {
+            width: 50%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 3px solid rgb(255, 255, 255);
+            font-size: 200%;
+            color: white;
+            font-family: Cambria;
+        }
+    </style>
+    <script>
+        let persone = [];
+        function aggiungiPersona() {
+            const nome = document.getElementById("demo").value;
+            const cognome = document.getElementById("demo1").value;
+            const eta = document.getElementById("demo2").value;
+            const indirizzo = document.getElementById("demo3").value;
+            const cap = document.getElementById("demo4").value;
+            const citta = document.getElementById("demo5").value;
+            if (nome && cognome && eta && indirizzo && cap && citta) {
+                const persona = {
+                    nome: nome,
+                    cognome: cognome,
+                    eta: eta,
+                    indirizzo: indirizzo,
+                    cap: cap,
+                    citta: citta
+                };
+                persone.push(persona);
+                aggiornaTabella();
+                document.getElementById("demo").value = '';
+                document.getElementById("demo1").value = '';
+                document.getElementById("demo2").value = '';
+                document.getElementById("demo3").value = '';
+                document.getElementById("demo4").value = '';
+                document.getElementById("demo5").value = '';
+            } else {
+                alert("Compila tutti i campi!");
+            }
+        }
+        function aggiornaTabella() {
+            const tabella = document.getElementById("tabellaPersone").getElementsByTagName("tbody")[0];
+            tabella.innerHTML = ''; 
+            persone.forEach(persona => {
+                const riga = tabella.insertRow();
+
+                const cellaNome = riga.insertCell(0);
+                cellaNome.textContent = persona.nome;
+
+                const cellaCognome = riga.insertCell(1);
+                cellaCognome.textContent = persona.cognome;
+
+                const cellaEta = riga.insertCell(2);
+                cellaEta.textContent = persona.eta;
+
+                const cellaIndirizzo = riga.insertCell(3);
+                cellaIndirizzo.textContent = persona.indirizzo;
+
+                const cellaCap = riga.insertCell(4);
+                cellaCap.textContent = persona.cap;
+
+                const cellaCitta = riga.insertCell(5);
+                cellaCitta.textContent = persona.citta;
+            });
+        }
+    </script>
+</head>
+<body>
+    <center>
+        <h1>Form e tabella con vettore</h1>
+        <p> Nome:
+            <input type="text" id="demo">
+        </p>
+        <p> Cognome:
+            <input type="text" id="demo1">
+        </p>
+        <p> Età:
+            <input type="text" id="demo2">
+        </p>
+        <p> Indirizzo:
+            <input type="text" id="demo3">
+        </p>
+        <p> CAP:
+            <input type="text" id="demo4">
+        </p>
+        <p> Città:
+            <input type="text" id="demo5">
+        </p>
+        <button onclick="aggiungiPersona()">Aggiungi Persona</button>
+    </center>
+
+    <center>
+        <table id="tabellaPersone">
+            <thead>
+                <tr>
+                    <th colspan="6" style="color: rgb(255, 255, 255); text-align: center">I tuoi dati</th>
+                </tr>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cognome</th>
+                    <th>Età</th>
+                    <th>Indirizzo</th>
+                    <th>CAP</th>
+                    <th>Città</th>
+                </tr>
+            </thead>
+            <tbody>
+               
+            </tbody>
+        </table>
+    </center>
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form con input</title>
+    <style>
+        h1{
+            text-align: center;
+            color: rgb(255, 255, 255);
+            font-size: 200%;
+            padding-bottom: 15px;
+            font-family: Cambria;
+        } 
+        p{
+            color: white;
+            font-family: Cambria;
+            padding-left: 2%;
+        }
+        body{
+            background-image: url("https://cdn-images.dzcdn.net/images/cover/5f48684ab6633c208cee60ade670a678/0x1900-000000-80-0-0.jpg") ;
+            background-position-x: center;
+            background-size: cover;
+            color: white;
+        }
+        table {
+            width: 50%;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: center;
+            border: 3px solid rgb(255, 255, 255);
+            font-size: 200%;
+            color: white;
+            font-family: Cambria;
+        }
+    </style>
+<script>
+    function stampa() {
+    var a=document.getElementById("demo").value
+    document.getElementById("dest").innerHTML=a
+    var b=document.getElementById("demo1").value
+    document.getElementById("dest1").innerHTML=b
+    var c=document.getElementById("demo2").value
+    document.getElementById("dest2").innerHTML=c
+    var d=document.getElementById("demo3").value
+    document.getElementById("dest3").innerHTML=d
+    var e=document.getElementById("demo4").value
+    document.getElementById("dest4").innerHTML=e
+    var f=document.getElementById("demo5").value
+    document.getElementById("dest5").innerHTML=f
+}
+</script>
+</head>
+<body>
+    <CENTER>
+    <h1>Form e tabella</h1>
+    <p> Nome:
+        <input type="text" id="demo">
+
+    </p>
+    <p> Cognome:
+        <input type="text" id="demo1">
+    </p>
+    <p> Età:
+        <input type="text" id="demo2">
+
+    <p> Indirizzo:
+    <input type="text" id="demo3">
+
+    </p>
+    <p> CAP:
+        <input type="text" id="demo4">
+    </p>
+    <p> Città:
+    <input type="text" id="demo5">
+    </p>
+    <input type="button" value="inserisci" onclick="stampa()">
+    </CENTER>
+    <center>
+        <table>
+            <th colspan="10" style="color: rgb(255, 255, 255); text-align: center">I tuoi dati</th>
+            <tr>
+            <th>Nome</th>
+            <th>Cognome</th>
+            <th>Età</th>
+            <th>Indirizzo</th>
+            <th>CAP</th>
+            <th>Città</th>
+            </tr>
+            <tr>
+            <td><p id="dest"></p></td>
+            <td><p id="dest1"></p></td>
+            <td><p id="dest2"></p></td>
+            <td><p id="dest3"></p></td>
+            <td><p id="dest4"></p></td>
+            <td><p id="dest5"></p></td>
+            </tr>
+            </table>
+    </center>
+</body>
+</html>

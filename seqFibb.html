@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sequenza di Fibonacci</title>
+</head>
+<body>
+    <div id="output"></div>
+
+    <script>
+
+        const outputDiv = document.getElementById('output');
+
+        let a = 0, b = 1;
+
+        let sequence = '';
+
+        do {
+            sequence += a + ' ';
+            let temp = a + b;   
+            a = b;               
+            b = temp;            
+        } while (a <= 100);      
+
+       
+        outputDiv.textContent = sequence.trim();
+    </script>
+</body>
+</html>

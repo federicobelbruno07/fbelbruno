@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tabella migranti</title>
+</head>
+    <style>
+        body{
+        background-image: url("data:image/jpeg;base64,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");
+        background-position-x: center;
+        background-size: cover;
+        }
+        p {
+            font-size: 30px;
+            padding-top: 10px;
+            color: white;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            font-size: 30px;
+            padding-top: 10px;
+        }
+        table {
+            width: 40%;
+            margin-left: 30%;;
+            padding-top: 10px;
+            border-collapse: collapse;
+        }
+        table, th, td {
+            border: 3px solid white;
+            font-weight: bold;
+            font-size: 30px;
+            color:white;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        canvas {
+            display: block;
+            margin: 20px auto;
+            border: 2px solid rgb(255, 255, 255);
+            background-color: rgb(255, 255, 255);
+        }
+    </style>
+</head>
+<body>
+    <h1>Tabella migranti</h1>
+    <p>
+    Inserire il file:
+    </p>
+    <input type="file" onchange="readFile(this)" accept=".csv">
+    <table id="tabellaCSV"></table>
+    <p>Nel grafico è rappresentata la curva degli sbarchi dei migranti dal 1997 fino al 2020</p><br>
+    <p>X: Anni, Y: Numero sbarchi</p><br>
+    <canvas id="Canvas" width="500" height="300" ></canvas>
+    <script>
+        function readFile(input) {
+            let file = input.files[0];
+            let reader = new FileReader();
+            reader.readAsText(file);
+            reader.onload = function() {
+                let data = reader.result;
+                let rows = data.split("\n");
+                let table = document.getElementById("tabellaCSV");
+                table.innerHTML = "";
+
+                for (let i = 0; i < rows.length; i++) {
+                    let row = rows[i].split(",");
+                    let tr = document.createElement("tr");
+                    for (let j = 0; j < row.length; j++) {
+                        let cell;
+                        if (i === 0) {
+                            cell = document.createElement("th");
+                        } else {
+                            cell = document.createElement("td");
+                        }
+                        cell.textContent = row[j].trim();
+                        tr.appendChild(cell);
+                    }
+                    table.appendChild(tr);
+                }
+            };
+            reader.onerror = function() {
+                console.error("errore nella lettura del file:", reader.error);
+            };
+        }
+        const canvas = document.getElementById("Canvas");
+        const ctx = canvas.getContext("2d");
+        ctx.beginPath();
+        //assi
+        ctx.moveTo(40, 10);
+        ctx.lineTo(40, 790);
+        ctx.moveTo(15, 770);
+        ctx.lineTo(795, 770);
+        ctx.stroke();
+        //anni
+        ctx.moveTo(70, 770);
+        ctx.lineTo(70, 775);
+        ctx.moveTo(100, 770);
+        ctx.lineTo(100, 775);
+        ctx.moveTo(130, 770);
+        ctx.lineTo(130, 775);
+        ctx.moveTo(160, 770);
+        ctx.lineTo(160, 775);
+        ctx.moveTo(190, 770);
+        ctx.lineTo(190, 775);
+        ctx.moveTo(220, 770);
+        ctx.lineTo(220, 775);
+        ctx.moveTo(250, 770);
+        ctx.lineTo(250, 775);
+        ctx.moveTo(280, 770);
+        ctx.lineTo(280, 775);
+        ctx.moveTo(310, 770);
+        ctx.lineTo(310, 775);
+        ctx.moveTo(340, 770);
+        ctx.lineTo(340, 775);
+        ctx.moveTo(370, 770);
+        ctx.lineTo(370, 775);
+        ctx.moveTo(400, 770);
+        ctx.lineTo(400, 775);
+        ctx.moveTo(430, 770);
+        ctx.lineTo(430, 775);
+        ctx.moveTo(460, 770);
+        ctx.lineTo(460, 775);
+        ctx.moveTo(490, 770);
+        ctx.lineTo(490, 775);
+        ctx.moveTo(520, 770);
+        ctx.lineTo(520, 775);
+        ctx.moveTo(550, 770);
+        ctx.lineTo(550, 775);
+        ctx.moveTo(580, 770);
+        ctx.lineTo(580, 775);
+        ctx.moveTo(610, 770);
+        ctx.lineTo(610, 775);
+        ctx.moveTo(640, 770);
+        ctx.lineTo(640, 775);
+        ctx.moveTo(670, 770);
+        ctx.lineTo(670, 775);
+        ctx.moveTo(700, 770);
+        ctx.lineTo(700, 775);
+        ctx.moveTo(730, 770);
+        ctx.lineTo(730, 775);
+        ctx.moveTo(760, 770);
+        ctx.lineTo(760, 775);
+        ctx.moveTo(790, 770);
+        ctx.lineTo(790, 775);
+        ctx.stroke();
+        //sbarchi
+        ctx.moveTo(40, 740);
+        ctx.lineTo(35, 740);
+        ctx.moveTo(40, 710);
+        ctx.lineTo(35, 710);
+        ctx.moveTo(40, 680);
+        ctx.lineTo(35, 680);
+        ctx.moveTo(40, 650);
+        ctx.lineTo(35, 650);
+        ctx.moveTo(40, 620);
+        ctx.lineTo(35, 620);
+        ctx.moveTo(40, 590);
+        ctx.lineTo(35, 590);
+        ctx.moveTo(40, 560);
+        ctx.lineTo(35, 560);
+        ctx.moveTo(40, 530);
+        ctx.lineTo(35, 530);
+        ctx.moveTo(40, 500);
+        ctx.lineTo(35, 500);
+        ctx.moveTo(40, 470);
+        ctx.lineTo(35, 470);
+        ctx.moveTo(40, 440);
+        ctx.lineTo(35, 440);
+        ctx.moveTo(40, 410);
+        ctx.lineTo(35, 410);
+        ctx.moveTo(40, 380);
+        ctx.lineTo(35, 380);
+        ctx.moveTo(40, 350);
+        ctx.lineTo(35, 350);
+        ctx.moveTo(40, 320);
+        ctx.lineTo(35, 320);
+        ctx.moveTo(40, 290);
+        ctx.lineTo(35, 290);
+        ctx.moveTo(40, 260);
+        ctx.lineTo(35, 260);
+        ctx.moveTo(40, 230);
+        ctx.lineTo(35, 230);
+        ctx.moveTo(40, 200);
+        ctx.lineTo(35, 200);
+        ctx.moveTo(40, 170);
+        ctx.lineTo(35, 170);
+        ctx.moveTo(40, 140);
+        ctx.lineTo(35, 140);
+        ctx.moveTo(40, 110);
+        ctx.lineTo(35, 110);
+        ctx.moveTo(40, 80);
+        ctx.lineTo(35, 80);
+        ctx.moveTo(40, 50);
+        ctx.lineTo(35, 50);
+        ctx.moveTo(40, 20);
+        ctx.lineTo(35, 20);
+        ctx.stroke();
+        //curve
+        ctx.moveTo(40, 770);
+        ctx.quadraticCurveTo(70, 470, 100, 230);
+        ctx.moveTo(100, 230);
+        ctx.quadraticCurveTo(130, 170, 160, 320);
+        ctx.moveTo(160, 320);
+        ctx.quadraticCurveTo(190, 530, 220, 380);
+        ctx.moveTo(220, 380);
+        ctx.quadraticCurveTo(250, 590, 280, 620);
+        ctx.moveTo(280, 620);
+        ctx.quadraticCurveTo(310, 440, 340, 500);
+        ctx.moveTo(340, 500);
+        ctx.quadraticCurveTo(370, 560, 400, 260);
+        ctx.moveTo(400, 260);
+        ctx.quadraticCurveTo(430, 710, 460, 740);
+        ctx.moveTo(460, 740);
+        ctx.quadraticCurveTo(490, 140, 520, 650);
+        ctx.moveTo(520, 650);
+        ctx.quadraticCurveTo(550, 200, 580, 50);
+        ctx.moveTo(580, 50);
+        ctx.quadraticCurveTo(610, 80, 640, 20);
+        ctx.moveTo(640, 20);
+        ctx.quadraticCurveTo(670, 110, 700, 350);
+        ctx.moveTo(700, 350);
+        ctx.quadraticCurveTo(730, 680, 760, 290);
+        ctx.moveTo(760, 290);
+        ctx.quadraticCurveTo(795, 770, 795, 770);
+        ctx.stroke();
+        </script>
+</body>
+</html>
