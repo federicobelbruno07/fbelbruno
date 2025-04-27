@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anagrafica con collection oggetti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: white;
+        }
+        h1 {
+            margin: 0;
+            color: #050202;
+            font-size: 50px;
+        }
+        </style>
+</head>
+<body>
+    
+
+    <center><h1>Inserisci I Tuoi Dati</h1></center>
+    
+        <center><input type="text" id="nome" name="nome" placeholder="Nome"><br><br></center>
+        <center><input type="text" id="cognome" name="cognome" placeholder="Cognome"><br><br></center>
+        <center><input type="text" id="età" name="età" placeholder="Anni"><br><br></center>
+        <center><input type="text" id="indirizzo" name="indirizzo" placeholder="Indirizzo"><br><br></center>
+        
+        <center><button type="button" onclick="invioDati()" class="pulsante">Invia Dati</button></center>
+
+    <script>
+        const dati = []
+        function invioDati(){
+            const nome = document.getElementById("nome").value;
+            const cognome = document.getElementById("cognome").value;
+            const eta = document.getElementById("età").value;
+            const indirizzo = document.getElementById("indirizzo").value;
+            anagrafia = {Nome:nome,Cognome:cognome,Eta:eta,Indirizzo:indirizzo};
+            dati.push(anagrafia);
+            localStorage.setItem("dati", JSON.stringify(dati));
+            window.location.href = "Anagraficaconcollectionoggetti2.html";
+        }
+	</script>
+</body>
+</html>
