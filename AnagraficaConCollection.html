@@ -5,42 +5,119 @@
     <title>Anagrafica con collection oggetti</title>
     <style>
         body {
+            margin: 0;
             font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: white;
+            background-image: url('https://www.roughtrade.com/_next/image?url=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0867%2F1120%2F6219%2Ffiles%2FLornaShore_IFeelTheEverblackFestering.jpg%3Fv%3D1747316844&w=3840&q=75');
+            background-size: cover;
+            background-position: center;
+            color: white;
         }
+
+        .contenitore {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            margin: 50px auto;
+            width: 90%;
+            max-width: 500px;
+            border-radius: 10px;
+        }
+
         h1 {
-            margin: 0;
-            color: #050202;
-            font-size: 50px;
+            margin-bottom: 20px;
         }
-        </style>
+
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"] {
+            width: 90%;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+        }
+
+        .pulsante, .pulsantePiu {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .pulsante {
+            background-color: #4CAF50;
+            color: white;
+            width: 100%;
+        }
+
+        .pulsantePiu {
+            background-color: #2196F3;
+            color: white;
+        }
+
+        img {
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
-    
+    <a href="../home2.html"><img src="immagini/backIcon.png" alt="Torna Indietro" width="30px" height="30px"></a>
+    <div class="contenitore">
+        <center><h1>Inserisci Account</h1></center>
+        <form id="myForm">
+            <label for="nome">Nome</label>
+            <center><input type="text" id="nome" name="nome" placeholder="Federico"><br></center>
 
-    <center><h1>Inserisci I Tuoi Dati</h1></center>
-    
-        <center><input type="text" id="nome" name="nome" placeholder="Nome"><br><br></center>
-        <center><input type="text" id="cognome" name="cognome" placeholder="Cognome"><br><br></center>
-        <center><input type="text" id="età" name="età" placeholder="Anni"><br><br></center>
-        <center><input type="text" id="indirizzo" name="indirizzo" placeholder="Indirizzo"><br><br></center>
-        
-        <center><button type="button" onclick="invioDati()" class="pulsante">Invia Dati</button></center>
+            <label for="cognome">Cognome</label>
+            <center><input type="text" id="cognome" name="cognome" placeholder="D'Amato"><br></center>
+
+            <label for="età">Età</label>
+            <center><input type="text" id="età" name="età" placeholder="18"><br></center>
+
+            <label for="indirizzo">Indirizzo</label>
+            <center><input type="text" id="indirizzo" name="indirizzo" placeholder="damato.federico@itiscannizzaro.edu.it"><br></center>
+
+            <label for="città">Città</label>
+            <center><input type="text" id="città" name="città" placeholder="Rho"><br><br></center>
+
+            <center>
+                <table width="100%">
+                    <tr>
+                        <td style="width: 85%;"><button type="button" onclick="passaAllaPaginaSuccessiva()" class="pulsante">Registra account</button></td>
+                        <td style="width: 15%;"><button type="button" onclick="prelevaDati()" class="pulsantePiu" title="registra e aggiungi">+</button></td>
+                    </tr>
+                </table>
+            </center>
+        </form>
+    </div>
 
     <script>
-        const dati = []
-        function invioDati(){
+        const datiAccount = []
+        function prelevaDati(){
             const nome = document.getElementById("nome").value;
             const cognome = document.getElementById("cognome").value;
             const eta = document.getElementById("età").value;
             const indirizzo = document.getElementById("indirizzo").value;
-            anagrafia = {Nome:nome,Cognome:cognome,Eta:eta,Indirizzo:indirizzo};
-            dati.push(anagrafia);
-            localStorage.setItem("dati", JSON.stringify(dati));
-            window.location.href = "Anagraficaconcollectionoggetti2.html";
+            const citta = document.getElementById("città").value;
+            account = {Nome:nome,Cognome:cognome,Eta:eta,Indirizzo:indirizzo, Citta:citta};
+            datiAccount.push(account);
+            document.getElementById("myForm").reset();
         }
-	</script>
+
+        function passaAllaPaginaSuccessiva(){
+            const nome = document.getElementById("nome").value;
+            const cognome = document.getElementById("cognome").value;
+            const eta = document.getElementById("età").value;
+            const indirizzo = document.getElementById("indirizzo").value;
+            const citta = document.getElementById("città").value;
+            account = {Nome:nome,Cognome:cognome,Eta:eta,Indirizzo:indirizzo, Citta:citta};
+            datiAccount.push(account);
+            document.getElementById("myForm").reset();
+            localStorage.setItem("datiAccount", JSON.stringify(datiAccount));
+            window.location.href = "RiceviDati.html";
+        }
+    </script>
 </body>
 </html>
