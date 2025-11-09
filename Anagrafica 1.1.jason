@@ -1,0 +1,52 @@
+[
+  {
+    "nome": "Luca",
+    "cognome": "Adesuwa",
+    "anno": 2001
+  },
+  {
+    "nome": "Sara",
+    "cognome": "Almuhtaseb",
+    "anno": 1998
+  },
+  {
+    "nome": "Marco",
+    "cognome": "Barbesta",
+    "anno": 1985
+  },
+  {
+    "nome": "Giulia",
+    "cognome": "Rossi",
+    "anno": 2007
+  },
+  {
+    "nome": "Federico",
+    "cognome": "Belbruno",
+    "anno": 1972
+  },
+  {
+    "nome": "Elena",
+    "cognome": "Ferrari",
+    "anno": 1968
+  },
+  {
+    "nome": "Antonio",
+    "cognome": "Verdi",
+    "anno": 1955
+  },
+  {
+    "nome": "Chiara",
+    "cognome": "Gallo",
+    "anno": 1999
+  },
+  {
+    "nome": "Michele",
+    "cognome": "Romano",
+    "anno": 2015
+  },
+  {
+    "nome": "Valentina",
+    "cognome": "Fontana",
+    "anno": 1989
+  }
+]
