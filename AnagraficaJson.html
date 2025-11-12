@@ -56,7 +56,7 @@ var utenti = [];
 
 
 var richiesta = new XMLHttpRequest();
-richiesta.open("GET", "Anagrafica 1.1.json");
+richiesta.open("GET", "Anagrafica1.1.json");
 richiesta.onload = function() {
   utenti = JSON.parse(richiesta.responseText);
   mostra(utenti);
